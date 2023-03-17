@@ -261,6 +261,38 @@ header {
 .product.item {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.product.item:hover img{
+  filter: brightness(0.5);
+}
+
+.add_to_cart{
+  position: absolute;
+  display: none;
+  width: 140px;
+  top: 35%;
+  margin-left: calc(50% - 70px);
+  margin-right: calc(50% - 70px);
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+
+.product.item:hover .add_to_cart{
+  display: flex;
+  color: white;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.product.item:hover .add_to_cart svg path{
+  fill: rgb(198, 46, 71);
 }
 
 .product.text {
